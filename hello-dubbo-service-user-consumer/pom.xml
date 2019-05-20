@@ -48,6 +48,12 @@
             <artifactId>dubbo-spring-boot-actuator</artifactId>
             <version>0.2.0</version>
         </dependency>
+        <!--序列化-->
+        <dependency>
+            <groupId>de.javakaffee</groupId>
+            <artifactId>kryo-serializers</artifactId>
+            <version>0.42</version>
+        </dependency>
         <dependency>
             <groupId>cn.itqzing</groupId>
             <artifactId>hello-dubbo-service-user-api</artifactId>

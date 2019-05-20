@@ -22,7 +22,9 @@ dubbo:
   registry:
     id: zookeeper
     address: zookeeper://192.168.25.129:2181?backup=192.168.25.129:2182,192.168.25.129:2183
-
+  ##loadBanlance:Random,RoundRobin,LeastActive,ConsistentHash
+  consumer:
+    loadbalance: leastactive
 # Dubbo Endpoint (default status is disable)
 endpoints:
   dubbo:

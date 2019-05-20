@@ -10,7 +10,7 @@ user:
 
 # Dubbo Config properties
 dubbo:
-  ## Base packages to scan Dubbo Component£º@com.alibaba.dubbo.config.annotation.Service
+  ## Base packages to scan Dubbo Componentï¿½ï¿½@com.alibaba.dubbo.config.annotation.Service
   scan:
     basePackages: cn.itqzing.hello.dubbo.service.user.provider.api
   ## ApplicationConfig Bean
@@ -19,6 +19,9 @@ dubbo:
     name: hello-dubbo-service-user-provider
     qos-port: 22222
     qos-enable: true
+  ##loadBalance:Random,RoundRobin,LeastActive,ConsistentHash
+  provider:
+    loadbalance: leastactive
   ## ProtocolConfig Bean
   protocol:
     id: dubbo
@@ -29,6 +32,7 @@ dubbo:
   registry:
     id: zookeeper
     address: zookeeper://192.168.25.129:2181?backup=192.168.25.129:2182,192.168.25.129:2183
+
 
 # Enables Dubbo All Endpoints
 management:
